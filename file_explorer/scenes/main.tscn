@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://bn6g2aj00j8qd"]
+
+[ext_resource type="PackedScene" uid="uid://jxh63py4cs87" path="res://scenes/file_open.tscn" id="1_4wb61"]
+
+[node name="main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="file_open" parent="." instance=ExtResource("1_4wb61")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -382.0
+offset_top = -55.0
+offset_right = 382.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+title = "Open picture"
+limited = ["png", "jpg", "webp"]

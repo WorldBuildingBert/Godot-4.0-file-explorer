@@ -1,0 +1,228 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxw38fr6y5sdp"]
+
+[ext_resource type="Script" path="res://scripts/file_explorer.gd" id="1_qfc1m"]
+
+[node name="file_explorer" type="ColorRect"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.117647, 0.278431, 0.34902, 1)
+script = ExtResource("1_qfc1m")
+
+[node name="beauty" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="beauty"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 188.0
+offset_right = 226.0
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="beauty"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 190.0
+offset_top = -127.0
+offset_bottom = -93.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -915.0
+offset_top = 17.0
+offset_right = -18.0
+offset_bottom = 512.0
+grow_horizontal = 0
+
+[node name="container" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+columns = 4
+
+[node name="pinned" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_top = 134.0
+offset_right = 188.0
+grow_vertical = 2
+
+[node name="pinned_container" type="VBoxContainer" parent="pinned"]
+layout_mode = 2
+
+[node name="special" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 173.0
+offset_bottom = 52.0
+
+[node name="pin" type="Button" parent="special"]
+layout_mode = 2
+text = "pin"
+
+[node name="new_folder" type="Button" parent="special"]
+layout_mode = 2
+text = "new folder"
+
+[node name="up" type="Button" parent="special"]
+layout_mode = 2
+text = "up"
+
+[node name="name" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 239.0
+offset_top = -59.0
+offset_right = 279.0
+offset_bottom = -33.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "Path"
+
+[node name="path" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 298.0
+offset_top = -60.0
+offset_right = -105.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="actions" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -94.0
+offset_top = -63.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="open" type="Button" parent="actions"]
+layout_mode = 2
+text = "open"
+
+[node name="cancel" type="Button" parent="actions"]
+layout_mode = 2
+text = "cancel"
+
+[node name="add_folder" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 141.0
+offset_top = -84.0
+offset_right = -30.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.337255, 0.556863, 0.619608, 1)
+
+[node name="name" type="Label" parent="add_folder"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -15.5
+offset_right = 45.0
+offset_bottom = 15.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "path"
+
+[node name="title" type="Label" parent="add_folder"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -129.0
+offset_right = 129.0
+offset_bottom = 45.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "Create new folder"
+
+[node name="newname" type="LineEdit" parent="add_folder"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 81.0
+offset_top = -15.0
+offset_right = -71.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="addf" type="Button" parent="add_folder"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -38.0
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "add"
+
+[node name="cancelf" type="Button" parent="add_folder"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -57.0
+offset_top = -31.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "cancel"
+
+[connection signal="pressed" from="special/pin" to="." method="_on_pin_pressed"]
+[connection signal="pressed" from="special/new_folder" to="." method="_on_new_folder_pressed"]
+[connection signal="pressed" from="special/up" to="." method="_on_up_pressed"]
+[connection signal="text_submitted" from="path" to="." method="_on_path_text_submitted"]
+[connection signal="pressed" from="actions/open" to="." method="_on_open_pressed"]
+[connection signal="pressed" from="actions/cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="add_folder/addf" to="." method="_on_addf_pressed"]
+[connection signal="pressed" from="add_folder/cancelf" to="." method="_on_cancelf_pressed"]
